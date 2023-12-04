@@ -10,7 +10,7 @@ dependencies: pandas, numpy, matplotlib.
 batch list:
 -----------
 batch 1: flo
-batch 2
+batch 2: Niklas
 batch 3
 batch 4
 batch 5
