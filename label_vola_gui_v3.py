@@ -9,6 +9,8 @@ import numpy as np
 
 import tkinter as tk
 from tkinter import Entry
+import matplotlib
+matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
 #plt.style.use("seaborn")
@@ -300,6 +302,8 @@ class SampleLabelerGUI(tk.Tk):
         # window = tk.Toplevel()  # Use Toplevel instead of Tk
         window.title("Vola Sample Label")
 
+        window.geometry("1600x800")
+
         # Display key-value pairs from the info_text dictionary
         for key, value in info_text.items():
             info_label = tk.Label(window, text=f"{key}: {value}", anchor="w",
@@ -415,5 +419,5 @@ class SampleLabelerGUI(tk.Tk):
 
 # Test Code
 if __name__ == '__main__':
-    sample_labeller_gui = SampleLabelerGUI(sample_batch_number=4)
+    sample_labeller_gui = SampleLabelerGUI(sample_batch_number=2)
     sample_labeller_gui.run()
