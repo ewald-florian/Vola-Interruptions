@@ -289,6 +289,7 @@ class SampleLabelerGUI(tk.Tk):
 
         # Create a frame for buttons and entry field
         button_frame = tk.Frame(window)
+        # Put buttons above plotl
         button_frame.pack(side="top", padx=10, pady=10)
 
         # Create a canvas for the Matplotlib fig
