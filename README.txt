@@ -18,4 +18,4 @@ batch 6
 batch 7: flo
 batch 8
 batch 9
-batch 10
+batch 10: max
