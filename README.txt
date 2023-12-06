@@ -17,5 +17,5 @@ batch 5: Niklas
 batch 6
 batch 7: flo
 batch 8
-batch 9
+batch 9: max
 batch 10: max
