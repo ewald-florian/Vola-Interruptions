@@ -15,7 +15,7 @@ batch 3: Niklas
 batch 4: flo
 batch 5
 batch 6
-batch 7
+batch 7: flo
 batch 8
 batch 9
 batch 10
