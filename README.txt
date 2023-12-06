@@ -11,7 +11,7 @@ batch list:
 -----------
 batch 1: flo
 batch 2: Niklas
-batch 3
+batch 3: Niklas
 batch 4: flo
 batch 5
 batch 6
