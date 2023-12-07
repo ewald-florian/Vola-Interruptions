@@ -16,6 +16,6 @@ batch 4: flo
 batch 5: Niklas
 batch 6: flo
 batch 7: flo
-batch 8
+batch 8: Niklas
 batch 9: max
 batch 10: max
