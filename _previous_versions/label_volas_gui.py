@@ -29,7 +29,7 @@ class SampleLabelerGUI(tk.Tk):
                  verbose=True):
         super().__init__()
 
-        self.data_dir = os.path.join(script_dir, "../vola_data_midpoints")
+        self.data_dir = os.path.join(script_dir, "../vola_data_midpoints_new")
         self.target_dir = os.path.join(script_dir, "../labeled_data")
         self.news_dir = os.path.join(script_dir, "../news", "news_reduced.csv.gz")
         self.verbose = verbose
