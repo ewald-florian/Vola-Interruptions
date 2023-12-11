@@ -11,7 +11,7 @@ batch list:
 -----------
 batch 1:
 batch 2:
-batch 3:
+batch 3: flo
 batch 4:
 batch 5:
 batch 6:
