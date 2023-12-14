@@ -497,5 +497,5 @@ class SampleLabelerGUI(tk.Tk):
 
 # Test Code
 if __name__ == '__main__':
-    sample_labeller_gui = SampleLabelerGUI(sample_batch_number=2)
+    sample_labeller_gui = SampleLabelerGUI(sample_batch_number=9)
     sample_labeller_gui.run()

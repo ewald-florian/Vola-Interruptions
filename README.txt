@@ -17,5 +17,5 @@ batch 5: Niklas
 batch 6:
 batch 7:
 batch 8: Benjamin
-batch 9:
+batch 9: Benjamin
 batch 10:
