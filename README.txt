@@ -15,7 +15,7 @@ batch 3: flo
 batch 4:
 batch 5: Niklas
 batch 6: Niklas
-batch 7:
+batch 7: Niklas
 batch 8: Benjamin
 batch 9: Benjamin
 batch 10:
