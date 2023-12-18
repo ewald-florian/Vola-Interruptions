@@ -12,7 +12,7 @@ batch list:
 batch 1: Niklas
 batch 2: Niklas
 batch 3: flo
-batch 4:
+batch 4: flo
 batch 5: Niklas
 batch 6: Niklas
 batch 7: Niklas
