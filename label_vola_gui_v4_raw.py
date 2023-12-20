@@ -427,6 +427,10 @@ class SampleLabelerGUI(tk.Tk):
 
         for vola in file_name_list:
 
+            # Skip vola samples which are already labeled.
+            if vola in list(self.result_df["Filename"]):
+                continue
+
             try:
                 vola_df = self._load_vola_df(vola)
                 fig = self._plot_vola(vola_df)
@@ -435,14 +439,14 @@ class SampleLabelerGUI(tk.Tk):
                 if self.display_news:
                     news_dict = self._get_news_info(vola_df, 10)
                     display_dict = {**display_dict, **news_dict}
-                label, comment, exit = self._create_widget(fig=fig, info_text=display_dict)
+                label, comment, exit = self._create_widget(fig=fig,
+                                                        info_text=display_dict)
                 self._store_input(label, comment, exit)
 
                 # Store results directly to csv.
                 self._save_results_to_csv()
                 # Load results from csv.
-                result_file = os.path.join(self.target_dir,
-                                           "label_result_file.csv")
+                result_file = os.path.join(self.target_dir, "label_result_file.csv")
                 self.result_df = pd.read_csv(result_file)
 
             except Exception as e:
@@ -460,4 +464,13 @@ class SampleLabelerGUI(tk.Tk):
 # Test Code
 if __name__ == '__main__':
     sample_labeller_gui = SampleLabelerGUI(sample_batch_number=2)
-    sample_labeller_gui.run()
+    file_dir = os.path.join(script_dir, "utils/missing_samples.csv")
+    file_name_list = list(pd.read_csv(file_dir).Filename)
+    batch_size = len(file_name_list) // 3
+
+    batch1 = file_name_list[:batch_size]
+    batch2 = file_name_list[batch_size:(2*batch_size)]
+    batch3 = file_name_list[(2*batch_size):]
+
+    # TODO: Auswahl zwischen batch1, batch2, batch3
+    sample_labeller_gui.run_from_list(file_name_list=batch1)
