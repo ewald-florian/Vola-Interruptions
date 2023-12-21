@@ -464,13 +464,11 @@ class SampleLabelerGUI(tk.Tk):
 # Test Code
 if __name__ == '__main__':
     sample_labeller_gui = SampleLabelerGUI(sample_batch_number=2)
-    file_dir = os.path.join(script_dir, "utils/missing_samples.csv")
+    file_dir = os.path.join(script_dir, "labeled_data/label_results_commented.csv")
     file_name_list = list(pd.read_csv(file_dir).Filename)
     batch_size = len(file_name_list) // 3
 
-    batch1 = file_name_list[:batch_size]
-    batch2 = file_name_list[batch_size:(2*batch_size)]
-    batch3 = file_name_list[(2*batch_size):]
+    batch1 = file_name_list
 
     # TODO: Auswahl zwischen batch1, batch2, batch3
     sample_labeller_gui.run_from_list(file_name_list=batch1)
